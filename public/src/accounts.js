@@ -4,8 +4,8 @@ function findAccountById(accounts, id) {
 }
 
 function sortAccountsByLastName(accounts) {
-//Return all account info, sorted by last name)  
-  return accounts.sort((accountA, accountB) => (accountA.name.last >accountB.name.last ? 1:-1));
+//Return all account info, sorted by last name. Account for mixed case if data isn't clean 
+  return accounts.sort((accountA, accountB) => (accountA.name.last.toLowerCase() >accountB.name.last.toLowerCase() ? 1:-1));
   }
 
 function getAccountFullNames(accounts) {
