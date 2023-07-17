@@ -1,5 +1,8 @@
 function findAuthorById(authors, id) {
-  return authors.find((author) => author.id === id);
+  //Find given ID in authors dataset and return object that matches
+  for (let i=0; i<authors.length; i++) {
+    if (authors[i].id === id) return authors[i]
+  };
 }
 
 function findBookById(books, id) {

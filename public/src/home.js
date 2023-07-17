@@ -7,9 +7,10 @@ function getTotalAccountsCount(accounts) {
 }
 
 function getBooksBorrowedCount(books) {
-  let borrowed = books.filter((book) => book.borrows.filter((bookInfo) => bookInfo.returned === false).length > 0);
-  return borrowed.length;
+	  let borrow = books.filter(((book) => book.borrows.filter((bookStatus) => bookStatus.returned === false).length > 0));
+	  return borrow.length;
 }
+
 
 // This is a helper function that's called by other functions inside this file. You don't have to edit it.
 function _sortObjectByValues(obj) {
